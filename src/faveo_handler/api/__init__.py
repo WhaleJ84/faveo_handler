@@ -61,4 +61,3 @@ class FaveoApi:
         self._set_api_key(api_key)
         self._remove_none_values_from_data()
         return self.data
-

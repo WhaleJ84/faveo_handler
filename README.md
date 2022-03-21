@@ -16,7 +16,7 @@ python3 -m pipenv install -e git+https://github.com/WhaleJ84/faveo_handler.git#e
 
 ## Usage
 
-The following is an example script that utilises the authenticate, create, read, and delete endpoints.
+The following is an example script that utilises the authenticate, create, read, update, and delete endpoints.
 
 ```python
 from os import getenv
@@ -36,6 +36,7 @@ ticket_id = api.create_ticket(
     sla="1",
     subject="test subject"
 )["response"]["ticket_id"]
+api.reply_ticket(ticket_id, "this is a test reply")
 pprint(api.get_tickets())
 api.delete_ticket(ticket_id)
 ```

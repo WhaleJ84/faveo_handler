@@ -116,6 +116,7 @@ class Create(FaveoApi):
         self._set_mobile(mobile)
         self._set_phone(phone)
         self._set_user_id(user_id)
+        self._remove_none_values_from_data()
         return self.data
 
     def create_ticket(
@@ -177,7 +178,6 @@ class Create(FaveoApi):
             phone=phone,
             user_id=user_id
         )
-        self._prepare_data()
         response = post(
             url=f"{self.url}/api/v1/helpdesk/create",
             headers=self.headers,

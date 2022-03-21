@@ -28,7 +28,10 @@ class FaveoApi:
         # Token does not necessarily want to be wiped every time the data is cleared
         # This will keep the original value unless stated otherwise
         if not token:
-            token = self.data["token"]
+            try:
+                token = self.data["token"]
+            except KeyError:
+                pass
         self.data["token"] = token
         return self.data["token"]
 
@@ -36,9 +39,18 @@ class FaveoApi:
         # API key does not want to be wiped every time the data is cleared
         # This will keep the original value unless stated otherwise
         if not api_key:
-            api_key = self.data["api_key"]
+            try:
+                api_key = self.data["api_key"]
+            except KeyError:
+                pass
         self.data["api_key"] = api_key
         return self.data["api_key"]
+
+    def _remove_none_values_from_data(self):
+        for key, value in list(self.data.items()):
+            if value is None:
+                del self.data[key]
+        return self.data
 
     def _set_data(
         self,
@@ -47,10 +59,6 @@ class FaveoApi:
     ):
         self._set_token(token)
         self._set_api_key(api_key)
+        self._remove_none_values_from_data()
         return self.data
 
-    def _prepare_data(self):
-        for key, value in list(self.data.items()):
-            if value is None:
-                del self.data[key]
-        return self.data

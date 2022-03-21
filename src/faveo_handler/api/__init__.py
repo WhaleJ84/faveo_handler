@@ -45,7 +45,7 @@ class FaveoApi:
         self.headers = headers
         return self.headers
 
-    def _set_token(self, token: str = None):
+    def _set_token(self, token=None):
         # Token does not necessarily want to be wiped every time the data is cleared
         # This will keep the original value unless stated otherwise
         if not token:
@@ -56,7 +56,7 @@ class FaveoApi:
         self.data["token"] = token
         return self.data["token"]
 
-    def _set_api_key(self, api_key: str = None):
+    def _set_api_key(self, api_key=None):
         # API key does not want to be wiped every time the data is cleared
         # This will keep the original value unless stated otherwise
         if not api_key:
@@ -67,71 +67,71 @@ class FaveoApi:
         self.data["api_key"] = api_key
         return self.data["api_key"]
 
-    def _set_body(self, body: str = None):
+    def _set_body(self, body=None):
         self.data["body"] = body
         return self.data["body"]
 
-    def _set_code(self, code: str = None):
+    def _set_code(self, code=None):
         self.data["code"] = code
         return self.data["code"]
 
-    def _set_dept(self, dept: str = None):
+    def _set_dept(self, dept=None):
         self.data["dept"] = dept
         return self.data["dept"]
 
-    def _set_deudate(self, duedate: str = None):
+    def _set_deudate(self, duedate=None):
         self.data["duedate"] = duedate
         return self.data["duedate"]
 
-    def _set_email(self, email: str = None):
+    def _set_email(self, email=None):
         self.data["email"] = email
         return self.data["email"]
 
-    def _set_first_name(self, first_name: str = None):
+    def _set_first_name(self, first_name=None):
         self.data["first_name"] = first_name
         return self.data["first_name"]
 
-    def _set_helptopic(self, helptopic: str = None):
+    def _set_helptopic(self, helptopic=None):
         self.data["helptopic"] = helptopic
         return self.data["helptopic"]
 
-    def _set_last_name(self, last_name: str = None):
+    def _set_last_name(self, last_name=None):
         self.data["last_name"] = last_name
         return self.data["last_name"]
 
-    def _set_mobile(self, mobile: str = None):
+    def _set_mobile(self, mobile=None):
         self.data["mobile"] = mobile
         return self.data["mobile"]
 
-    def _set_phone(self, phone: str = None):
+    def _set_phone(self, phone=None):
         self.data["phone"] = phone
         return self.data["phone"]
 
-    def _set_priority(self, priority: str = None):
+    def _set_priority(self, priority=None):
         self.data["priority"] = priority
         return self.data["priority"]
 
-    def _set_sla(self, sla: str = None):
+    def _set_sla(self, sla=None):
         self.data["sla"] = sla
         return self.data["sla"]
 
-    def _set_subject(self, subject: str = None):
+    def _set_subject(self, subject=None):
         self.data["subject"] = subject
         return self.data["subject"]
 
-    def _set_user_id(self, user_id: str = None):
+    def _set_user_id(self, user_id=None):
         self.data["user_id"] = user_id
         return self.data["user_id"]
 
-    def _set_ticket_id(self, ticket_id: str = None):
+    def _set_ticket_id(self, ticket_id=None):
         self.data["ticket_id"] = ticket_id
         return self.data["ticket_id"]
 
-    def _set_ip(self, ip: str = None):
+    def _set_ip(self, ip=None):
         self.data["ip"] = ip
         return self.data["ip"]
 
-    def _set_reply_content(self, reply_content: str = None):
+    def _set_reply_content(self, reply_content=None):
         self.data["reply_content"] = reply_content
         return self.data["reply_content"]
 
@@ -143,25 +143,25 @@ class FaveoApi:
 
     def _set_data(
         self,
-        token: str = None,
-        api_key: str = None,
-        body: str = None,
-        email: str = None,
-        first_name: str = None,
-        helptopic: str = None,
-        last_name: str = None,
-        priority: str = None,
-        sla: str = None,
-        subject: str = None,
-        code: str = None,
-        dept: str = None,
-        duedate: str = None,
-        mobile: str = None,
-        phone: str = None,
-        user_id: str = None,
-        ticket_id: str = None,
-        ip: str = None,
-        reply_content: str = None,
+        token=None,
+        api_key=None,
+        body=None,
+        email=None,
+        first_name=None,
+        helptopic=None,
+        last_name=None,
+        priority=None,
+        sla=None,
+        subject=None,
+        code=None,
+        dept=None,
+        duedate=None,
+        mobile=None,
+        phone=None,
+        user_id=None,
+        ticket_id=None,
+        ip=None,
+        reply_content=None,
     ):
         self._set_token(token)
         self._set_api_key(api_key)

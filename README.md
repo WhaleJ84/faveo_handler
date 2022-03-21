@@ -30,10 +30,10 @@ ticket_id = api.create_ticket(
     body="test body of at least ten characters",
     email="admin@example.com",
     first_name="Mr",
-    helptopic="1",
+    helptopic=1,
     last_name="Administrator",
-    priority="1",
-    sla="1",
+    priority=1,
+    sla=1,
     subject="test subject"
 )["response"]["ticket_id"]
 api.reply_ticket(ticket_id, "this is a test reply")

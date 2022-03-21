@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: faveo-handler
-Version: 0.3.1
+Version: 0.3.2
 Summary: A Python library to interact with the Faveo API
 Home-page: https://github.com/WhaleJ84/faveo_handler
 Author: James Whale

@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="faveo-handler",
-    version="0.3.1",
+    version="0.3.2",
     author="James Whale",
     author_email="james@james-whale.com",
     description="A Python library to interact with the Faveo API",

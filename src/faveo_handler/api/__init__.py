@@ -1,7 +1,9 @@
 class FaveoApi:
-    def __init__(self, url: str):
+    def __init__(self, url: str, api_key: str = None):
         """
         :param url: Base URL to the Faveo instance. e.g. `https://faveo.example.com'
+        :param api_key: An alphanumeric code that can be used to authenticate your API calls.
+        To make it required login to Admin panel and go to API setting and make it mandatory
         """
         self.url = url.strip("/")
         self.headers = {
@@ -10,7 +12,7 @@ class FaveoApi:
         }
         self._data = {
             "token": None,
-            "api_key": None,
+            "api_key": api_key,
         }
         self.data = self._data
 

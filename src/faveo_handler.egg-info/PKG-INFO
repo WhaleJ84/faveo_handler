@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: faveo-handler
-Version: 0.3.0
+Version: 0.3.1
 Summary: A Python library to interact with the Faveo API
 Home-page: https://github.com/WhaleJ84/faveo_handler
 Author: James Whale
@@ -29,7 +29,7 @@ python3 -m pipenv install -e git+https://github.com/WhaleJ84/faveo_handler.git#e
 
 ## Usage
 
-The following is an example script that utilises the authenticate, create, read, and delete endpoints.
+The following is an example script that utilises the authenticate, create, read, update, and delete endpoints.
 
 ```python
 from os import getenv
@@ -43,12 +43,13 @@ ticket_id = api.create_ticket(
     body="test body of at least ten characters",
     email="admin@example.com",
     first_name="Mr",
-    helptopic="1",
+    helptopic=1,
     last_name="Administrator",
-    priority="1",
-    sla="1",
+    priority=1,
+    sla=1,
     subject="test subject"
 )["response"]["ticket_id"]
+api.reply_ticket(ticket_id, "this is a test reply")
 pprint(api.get_tickets())
 api.delete_ticket(ticket_id)
 ```

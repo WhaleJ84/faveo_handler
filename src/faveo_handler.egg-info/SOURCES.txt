@@ -7,3 +7,10 @@ src/faveo_handler.egg-info/SOURCES.txt
 src/faveo_handler.egg-info/dependency_links.txt
 src/faveo_handler.egg-info/requires.txt
 src/faveo_handler.egg-info/top_level.txt
+src/faveo_handler/api/__init__.py
+src/faveo_handler/api/authenticate/__init__.py
+src/faveo_handler/api/helpdesk/__init__.py
+src/faveo_handler/api/helpdesk/create.py
+src/faveo_handler/api/helpdesk/delete.py
+src/faveo_handler/api/helpdesk/read.py
+src/faveo_handler/api/helpdesk/update.py

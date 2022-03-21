@@ -2,6 +2,8 @@
 # https://github.com/ladybirdweb/faveo-helpdesk/wiki/Create-Internal-Note
 # https://github.com/ladybirdweb/faveo-helpdesk/wiki/Collaborator-Create
 # https://github.com/ladybirdweb/faveo-helpdesk/wiki/Collaborator-Remove
+from typing import Union
+
 from requests import post
 
 from src.faveo_handler.api import FaveoApi
@@ -13,7 +15,7 @@ class Update(FaveoApi):
 
     def reply_ticket(
         self,
-        ticket_id: int,
+        ticket_id: Union[int, str],
         reply_content: str,
         token: str = None,
         api_key: str = None,

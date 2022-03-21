@@ -1,3 +1,5 @@
+from typing import Union
+
 from requests import post
 
 from src.faveo_handler.api import FaveoApi
@@ -9,7 +11,7 @@ class Delete(FaveoApi):
 
     def delete_ticket(
         self,
-        ticket_id: str,
+        ticket_id: Union[int, str],
         token: str = None,
         api_key: str = None
     ):

@@ -1,4 +1,6 @@
 # https://github.com/ladybirdweb/faveo-helpdesk/wiki/Register-a-User
+from typing import Union
+
 from requests import post
 
 from src.faveo_handler.api import FaveoApi
@@ -13,17 +15,17 @@ class Create(FaveoApi):
         body: str,
         email: str,
         first_name: str,
-        helptopic: str,
+        helptopic: Union[int, str],
         last_name: str,
-        priority: str,
-        sla: str,
+        priority: Union[int, str],
+        sla: Union[int, str],
         subject: str,
         code: str = None,
         dept: str = None,
         duedate: str = None,
         mobile: str = None,
         phone: str = None,
-        user_id: str = None,
+        user_id: Union[int, str] = None,
         api_key: str = None,
         token: str = None
     ):

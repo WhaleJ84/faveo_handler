@@ -29,8 +29,11 @@ class FaveoApi:
             "sla": None,
             "subject": None,
             "user_id": None,
-            # Helpdesk/Delete
+            # Helpdesk/Update&Delete
             "ticket_id": None,
+            # Helpdesk/Update
+            "ip": None,
+            "reply_content": None,
         }
         self.data = self._data
 
@@ -124,6 +127,14 @@ class FaveoApi:
         self.data["ticket_id"] = ticket_id
         return self.data["ticket_id"]
 
+    def _set_ip(self, ip: str = None):
+        self.data["ip"] = ip
+        return self.data["ip"]
+
+    def _set_reply_content(self, reply_content: str = None):
+        self.data["reply_content"] = reply_content
+        return self.data["reply_content"]
+
     def _remove_none_values_from_data(self):
         for key, value in list(self.data.items()):
             if value is None:
@@ -148,7 +159,9 @@ class FaveoApi:
         mobile: str = None,
         phone: str = None,
         user_id: str = None,
-        ticket_id: str = None
+        ticket_id: str = None,
+        ip: str = None,
+        reply_content: str = None,
     ):
         self._set_token(token)
         self._set_api_key(api_key)
@@ -167,5 +180,7 @@ class FaveoApi:
         self._set_phone(phone)
         self._set_user_id(user_id)
         self._set_ticket_id(ticket_id)
+        self._set_ip(ip)
+        self._set_reply_content(reply_content)
         self._remove_none_values_from_data()
         return self.data

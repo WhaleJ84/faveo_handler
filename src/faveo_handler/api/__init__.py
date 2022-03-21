@@ -48,3 +48,9 @@ class FaveoApi:
         self._set_token(token)
         self._set_api_key(api_key)
         return self.data
+
+    def _prepare_data(self):
+        for key, value in list(self.data.items()):
+            if value is None:
+                del self.data[key]
+        return self.data

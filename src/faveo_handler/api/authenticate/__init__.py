@@ -25,6 +25,8 @@ class Authenticate(FaveoApi):
             json=self.data
         )
         self.data["token"] = response.json()["token"]
+        self.data.pop("username")
+        self.data.pop("password")
         return self.data["token"]
 
     def get_authenticated_user(self, api_key: str = None, token: str = None):

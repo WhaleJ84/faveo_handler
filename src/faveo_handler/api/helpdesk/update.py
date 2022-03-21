@@ -6,7 +6,7 @@ from typing import Union
 
 from requests import post
 
-from src.faveo_handler.api import FaveoApi
+from faveo_handler.api import FaveoApi
 
 
 class Update(FaveoApi):

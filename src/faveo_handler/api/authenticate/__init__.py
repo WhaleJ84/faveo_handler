@@ -1,6 +1,6 @@
 from requests import get, post
 
-from src.faveo_handler.api import FaveoApi
+from faveo_handler.api import FaveoApi
 
 
 class Authenticate(FaveoApi):

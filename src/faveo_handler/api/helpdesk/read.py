@@ -23,7 +23,7 @@
 # https://github.com/ladybirdweb/faveo-helpdesk/wiki/Faveo-tickets-API-with-filters-and-order
 from requests import get
 
-from src.faveo_handler.api import FaveoApi
+from faveo_handler.api import FaveoApi
 
 
 class Read(FaveoApi):

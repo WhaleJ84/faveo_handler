@@ -1,5 +1,5 @@
-from src.faveo_handler.api.authenticate import Authenticate
-from src.faveo_handler.api.helpdesk import Helpdesk
+from faveo_handler.api.authenticate import Authenticate
+from faveo_handler.api.helpdesk import Helpdesk
 
 
 class FaveoHandler(Authenticate, Helpdesk):
